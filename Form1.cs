@@ -12,6 +12,7 @@ namespace Sample
 {
     public partial class Calculator : Form
     {
+        int state = 0;
         public Calculator()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace Sample
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             guna2TextBox1.Text = "DEVELOPED BY: JEFFREY LONZANIDA";
+            state = 1;
         }
 
         private void guna2Button1_Click_2(object sender, EventArgs e)
@@ -44,85 +46,232 @@ namespace Sample
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "+";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "+";
+            }
+            else
+            {
+                guna2TextBox1.Text += "+";
+            }
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "-";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "-";
+            }
+            else
+            {
+                guna2TextBox1.Text += "-";
+            }
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "*";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "*";
+            }
+            else
+            {
+                guna2TextBox1.Text += "*";
+            }
         }
 
         private void guna2Button12_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "/";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "/";
+            }
+            else
+            {
+                guna2TextBox1.Text += "/";
+            }
         }
 
         private void guna2Button16_Click(object sender, EventArgs e)
         {
-            string TextVal = guna2TextBox1.Text;
-            double Expression = Convert.ToDouble(new DataTable().Compute(TextVal, ""));
-            guna2TextBox1.Text = Expression.ToString();
-
+            try
+            {
+                string TextVal = guna2TextBox1.Text;
+                double Expression = Convert.ToDouble(new DataTable().Compute(TextVal, ""));
+                guna2TextBox1.Text = Expression.ToString();
+            }
+            catch
+            {
+                guna2TextBox1.Text = "Syntax Error";
+                state = 1;
+            }
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "7";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "7";
+            }
+            else
+            {
+                guna2TextBox1.Text += "7";
+            }
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "8";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "8";
+            }
+            else
+            {
+                guna2TextBox1.Text += "8";
+            }
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "9";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "9";
+            }
+            else
+            {
+                guna2TextBox1.Text += "9";
+            }
         }
 
         private void guna2Button11_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "4";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "4";
+            }
+            else
+            {
+                guna2TextBox1.Text += "4";
+            }
         }
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "5";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "5";
+            }
+            else
+            {
+                guna2TextBox1.Text += "5";
+            }
         }
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "6";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "6";
+            }
+            else
+            {
+                guna2TextBox1.Text += "6";
+            }
         }
 
         private void guna2Button15_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "1";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "1";
+            }
+            else
+            {
+                guna2TextBox1.Text += "1";
+            }
         }
 
         private void guna2Button14_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "2";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "2";
+            }
+            else
+            {
+                guna2TextBox1.Text += "2";
+            }
         }
 
         private void guna2Button13_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "3";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "3";
+            }
+            else
+            {
+                guna2TextBox1.Text += "3";
+            }
         }
 
         private void guna2Button19_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += ".";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += ".";
+            }
+            else
+            {
+                guna2TextBox1.Text += ".";
+            }
         }
 
         private void guna2Button18_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += "0";
+            if (state == 1)
+            {
+                state = 0;
+                guna2TextBox1.Text = "";
+                guna2TextBox1.Text += "0";
+            }
+            else
+            {
+                guna2TextBox1.Text += "0";
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
