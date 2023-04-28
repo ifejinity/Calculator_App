@@ -44,82 +44,85 @@ namespace Sample
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += '+';
+            guna2TextBox1.Text += "+";
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += '-';
+            guna2TextBox1.Text += "-";
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += '*';
+            guna2TextBox1.Text += "*";
         }
 
         private void guna2Button12_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += '/';
+            guna2TextBox1.Text += "/";
         }
 
         private void guna2Button16_Click(object sender, EventArgs e)
         {
+            string TextVal = guna2TextBox1.Text;
+            double Expression = Convert.ToDouble(new DataTable().Compute(TextVal, ""));
+            guna2TextBox1.Text = Expression.ToString();
 
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 7;
+            guna2TextBox1.Text += "7";
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 8;
+            guna2TextBox1.Text += "8";
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 9;
+            guna2TextBox1.Text += "9";
         }
 
         private void guna2Button11_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 4;
+            guna2TextBox1.Text += "4";
         }
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 5;
+            guna2TextBox1.Text += "5";
         }
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 6;
+            guna2TextBox1.Text += "6";
         }
 
         private void guna2Button15_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 1;
+            guna2TextBox1.Text += "1";
         }
 
         private void guna2Button14_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 2;
+            guna2TextBox1.Text += "2";
         }
 
         private void guna2Button13_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 3;
+            guna2TextBox1.Text += "3";
         }
 
         private void guna2Button19_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += '.';
+            guna2TextBox1.Text += ".";
         }
 
         private void guna2Button18_Click(object sender, EventArgs e)
         {
-            guna2TextBox1.Text += 0;
+            guna2TextBox1.Text += "0";
         }
     }
 }
